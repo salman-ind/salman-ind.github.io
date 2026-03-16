@@ -115,7 +115,7 @@
       font-size: 10px; color: var(--accent); font-weight: 400; letter-spacing: 0.5px;
     }
 
-    .nav-name { font-size: 14px; color: var(--muted); letter-spacing: 0.3px; }
+    .nav-name { font-size: 16px; color: var(--muted); letter-spacing: 0.3px; }
 
     .nav-links {
       display: flex; align-items: center; gap: 28px;
@@ -123,7 +123,7 @@
     }
 
     .nav-links a {
-      font-size: 13px; color: var(--faint);
+      font-size: 16px; color: var(--faint);
       text-decoration: none; letter-spacing: 0.5px;
       transition: color 0.2s;
     }
@@ -172,7 +172,7 @@
 
     .status-label {
       font-family: 'DM Mono', monospace;
-      font-size: 10px; color: var(--green); letter-spacing: 2px; text-transform: uppercase;
+      font-size: 16px; color: var(--green); letter-spacing: 2px; text-transform: uppercase;
     }
 
     h1 {
@@ -228,7 +228,7 @@
 
     .card-section-label {
       font-family: 'DM Mono', monospace;
-      font-size: 9px; color: var(--faint); letter-spacing: 2.5px;
+      font-size: 14px; color: var(--faint); letter-spacing: 2.5px;
       text-transform: uppercase; margin-bottom: 16px;
       padding-bottom: 12px; border-bottom: 0.5px solid var(--border);
     }
@@ -246,15 +246,24 @@
     }
 
     .contact-text {
-      font-size: 13px; color: var(--muted);
+      font-size: 14px; color: var(--muted);
       text-decoration: none; transition: color 0.2s;
     }
     .contact-text:hover { color: var(--text); }
 
     .edu-block { margin-top: 20px; padding-top: 16px; border-top: 0.5px solid var(--border); }
-    .edu-title { font-size: 14px; color: var(--text); margin-bottom: 3px; font-weight: 500; }
+    .edu-title { font-size: 16px; color: var(--text); margin-bottom: 3px; font-weight: 500; }
+    .edu-subtitle { font-size: 14px; color: var(--text); margin-bottom: 3px; font-weight: 900; }
     .edu-sub { font-size: 12px; color: var(--faint); }
     .edu-sub2 { font-size: 12px; color: var(--faint); margin-top: 10px; }
+
+    .edu-divider {
+      width: 50%;
+      height: 0.5px;
+      background: var(--border);
+      margin: 16px auto;
+      opacity: 0.9;
+    }
 
     /* ── SECTIONS ── */
     .section-wrap { max-width: 1200px; margin: 0 auto; padding: 64px 48px; border-bottom: 0.5px solid var(--border); }
@@ -274,7 +283,7 @@
 
     .section-tag {
       font-family: 'DM Mono', monospace;
-      font-size: 10px; color: var(--faint); letter-spacing: 1.5px;
+      font-size: 14px; color: var(--faint); letter-spacing: 1.5px;
       white-space: nowrap; text-transform: uppercase;
     }
 
@@ -302,19 +311,19 @@
     }
 
     .tl-meta { padding-top: 2px; }
-    .tl-date { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--faint); line-height: 1.7; }
+    .tl-date { font-family: 'DM Mono', monospace; font-size: 14px; color: var(--faint); line-height: 1.7; }
     .tl-badge {
       display: inline-block; margin-top: 8px;
-      font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+      font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
       padding: 3px 8px; border-radius: 2px;
     }
     .badge-green { background: var(--green-dim); border: 0.5px solid var(--green-border); color: var(--green); }
     .badge-amber { background: var(--accent-dim); border: 0.5px solid var(--accent-border); color: var(--accent); }
 
-    .tl-role { font-size: 17px; color: var(--text); font-weight: 500; margin-bottom: 5px; }
+    .tl-role { font-size: 18px; color: var(--text); font-weight: 500; margin-bottom: 5px; }
     .tl-org-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; gap: 12px; }
-    .tl-org { font-size: 15px; color: var(--accent); letter-spacing: 0.3px; }
-    .tl-loc { font-size: 12px; color: var(--faint); font-family: 'DM Mono', monospace; white-space: nowrap; letter-spacing: 0.3px; }
+    .tl-org { font-size: 16px; color: var(--accent); letter-spacing: 0.3px; }
+    .tl-loc { font-size: 14px; color: var(--faint); font-family: 'DM Mono', monospace; white-space: nowrap; letter-spacing: 0.3px; }
     .tl-bullets { display: flex; flex-direction: column; gap: 8px; }
     .tl-bullet { display: flex; gap: 12px; align-items: flex-start; }
     .tl-dash { color: var(--accent); font-size: 14px; flex-shrink: 0; margin-top: 2px; }
@@ -377,7 +386,7 @@
 
     .skill-label {
       font-family: 'DM Mono', monospace;
-      font-size: 9px; color: var(--accent); letter-spacing: 2px;
+      font-size: 14px; color: var(--accent); letter-spacing: 2px;
       text-transform: uppercase; margin-bottom: 14px;
     }
 
@@ -512,7 +521,7 @@
       
       <div class="contact-row">
         <div class="contact-icon" style="font-size:8px;">in</div>
-        <a href="https://linkedin.com/in/mohamed-salman-ind" target="_blank" rel="noopener" class="contact-text">linkedin/in/mohamed-salman-ind</a>
+        <a href="https://linkedin.com/in/mohamed-salman-ind" target="_blank" rel="noopener" class="contact-text">LinkedIn</a>
       </div>
       <div class="contact-row">
         <div class="contact-icon" style="font-size:8px;">📍</div>
@@ -526,10 +535,16 @@
       <div class="edu-block">
         <p class="card-section-label" style="margin-top:0;">Education</p>
         <p class="edu-title">M.Sc. Data Science & Artificial Intelligence</p>
-        <p class="edu-sub">Saarland University · 2023 – 2026</p>
-        <p class="edu-sub" style="margin-top:4px;">Thesis: Interpretable Gesture Representations for LLMs</p>
+        <p class="edu-subtitle">Saarland University</p>
+        <p class="edu-sub" style="margin-top:4px;">Saarbrücken, Germany</p>
+        <p class="edu-sub" style="margin-top:4px;">2023 – 2026</p>
+        <div class="edu-divider"></div>
         <p class="edu-title">B.E Computer Science & Engineering</p>
-        <p class="edu-sub">Nitte Meenakshi Institute of Technology · 2016 – 2020</p>
+        <p class="edu-subtitle">Nitte Meenakshi Institute of Technology</p>
+        <p class="edu-sub" style="margin-top:4px;">Bengaluru, India</p>
+        <p class="edu-sub" style="margin-top:4px;">2016 – 2020</p>
+
+
       </div>
     </div>
   </section>
@@ -553,7 +568,7 @@
           <p class="tl-role">Junior Researcher · Data Science</p>
           <div class="tl-org-row">
             <span class="tl-org">August-Wilhelm Scheer Institut</span>
-            <span class="tl-loc">Saarbrücken, Germany</span>
+            <span class="tl-loc">📍Saarbrücken, Germany</span>
           </div>
           <div class="tl-bullets">
             <div class="tl-bullet"><span class="tl-dash">—</span><span class="tl-text">R&D on object detection and instance segmentation using multi-sensor fusion for real-world perception.</span></div>
@@ -576,7 +591,7 @@
           <p class="tl-role">Machine Learning Engineer · Apple via TCS</p>
           <div class="tl-org-row">
             <span class="tl-org">Tata Consultancy Services</span>
-            <span class="tl-loc">Bengaluru, India</span>
+            <span class="tl-loc">📍Bengaluru, India</span>
           </div>
           <div class="tl-bullets">
             <div class="tl-bullet"><span class="tl-dash" style="color:#555;">—</span><span class="tl-text">End-to-end ML pipelines for recommendation, text classification, and neural machine translation — improved click-through rates by 15% on high-traffic Apple web platforms.</span></div>
@@ -632,7 +647,7 @@
       </a>
 
       <!-- ICAART -->
-      <div class="r-card fade-up" style="transition-delay:.15s">
+      <a href="https://doi.org/10.5220/0014413400004052" target="_blank" rel="noopener" class="r-card fade-up" style="transition-delay:.15s">
         <div class="r-card-header">
           <span class="venue-badge badge-green">ICAART 2026</span>
           <span class="r-arrow">↗</span>
@@ -645,6 +660,7 @@
           <span class="r-tag">Object Detection</span>
           <span class="r-tag">Survey</span>
         </div>
+      </a>
       </div>
 
     </div>
