@@ -130,6 +130,67 @@
 
     .nav-links a:hover { color: var(--text); }
 
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .hamburger-btn {
+      display: none;
+      width: 32px; height: 32px;
+      border: 0.5px solid var(--border2);
+      background: transparent;
+      cursor: pointer; border-radius: 2px;
+      align-items: center; justify-content: center;
+      transition: border-color 0.2s, background 0.2s;
+      flex-shrink: 0;
+      padding: 0;
+    }
+
+    .hamburger-btn:hover,
+    .hamburger-btn[aria-expanded="true"] {
+      border-color: var(--muted);
+      background: var(--bg2);
+    }
+
+    .hamburger-btn svg {
+      width: 16px; height: 16px;
+      fill: none; stroke: var(--muted); stroke-width: 1.75;
+      stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 58px;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background: var(--nav-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--border);
+      padding: 12px 20px 18px;
+    }
+
+    .mobile-menu.open { display: none; }
+
+    .mobile-menu a {
+      display: block;
+      text-decoration: none;
+      color: var(--muted);
+      padding: 12px 0;
+      border-bottom: 0.5px solid var(--border);
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+    }
+
+    .mobile-menu a:hover { color: var(--text); }
+
+    .mobile-menu a:last-child { border-bottom: none; padding-bottom: 0; }
+
     .nav-cta {
       background: var(--accent-dim);
       border: 0.5px solid var(--accent-border);
@@ -204,7 +265,7 @@
       background: var(--accent); color: var(--bg);
       border: none; padding: 12px 28px;
       font-family: 'DM Sans', sans-serif;
-      font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
       cursor: pointer; border-radius: 2px; text-decoration: none;
       transition: background 0.2s;
     }
@@ -228,7 +289,7 @@
 
     .card-section-label {
       font-family: 'DM Mono', monospace;
-      font-size: 14px; color: var(--faint); letter-spacing: 2.5px;
+      font-size: 18px; color: var(--text); letter-spacing: 2.5px;
       text-transform: uppercase; margin-bottom: 16px;
       padding-bottom: 12px; border-bottom: 0.5px solid var(--border);
     }
@@ -246,15 +307,15 @@
     }
 
     .contact-text {
-      font-size: 14px; color: var(--muted);
+      font-size: 15px; color: var(--muted);
       text-decoration: none; transition: color 0.2s;
     }
     .contact-text:hover { color: var(--text); }
 
     .edu-block { margin-top: 20px; padding-top: 16px; border-top: 0.5px solid var(--border); }
     .edu-title { font-size: 16px; color: var(--text); margin-bottom: 3px; font-weight: 500; }
-    .edu-subtitle { font-size: 14px; color: var(--text); margin-bottom: 3px; font-weight: 900; }
-    .edu-sub { font-size: 12px; color: var(--faint); }
+    .edu-subtitle { font-size: 15px; color: var(--text); margin-bottom: 3px; font-weight: 900; }
+    .edu-sub { font-size: 14px; color: var(--faint); }
     .edu-sub2 { font-size: 12px; color: var(--faint); margin-top: 10px; }
 
     .edu-divider {
@@ -432,6 +493,14 @@
     @media (max-width: 768px) {
       nav { padding: 0 20px; }
       .nav-links { display: none; }
+      .hamburger-btn { display: flex; }
+      .mobile-menu.open { display: block; }
+      .nav-name { display: none; }
+      .mobile-menu .nav-cta {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 10px 14px;
+      }
 
       #hero { grid-template-columns: 1fr; padding: 120px 20px 60px; gap: 40px; }
       h1 { font-size: 42px; }
@@ -467,14 +536,24 @@
       <li><a href="#research">Research</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="mailto:salman97@gmail.com" class="nav-cta">Contact ↗</a></li>
-      <li>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
-          <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </button>
-      </li>
     </ul>
+    <div class="nav-actions">
+      <button class="hamburger-btn" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7" /><line x1="4" y1="12" x2="20" y2="12" /><line x1="4" y1="17" x2="20" y2="17" /></svg>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+        <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </div>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#experience">Experience</a>
+    <a href="#research">Research</a>
+    <a href="#skills">Skills</a>
+    <a href="mailto:salman97@gmail.com" class="nav-cta">Contact ↗</a>
+  </div>
 
   <!-- HERO -->
   <section id="hero">
@@ -740,6 +819,38 @@
 
     // Observe all others
     document.querySelectorAll('.fade-up:not(#hero .fade-up)').forEach(el => observer.observe(el));
+
+    // ── MOBILE MENU ──
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+
+    const closeMenu = () => {
+      if (!menuToggle || !mobileMenu) return;
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation menu');
+      mobileMenu.classList.remove('open');
+    };
+
+    const toggleMenu = () => {
+      if (!menuToggle || !mobileMenu) return;
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+      mobileMenu.classList.toggle('open', !isOpen);
+    };
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', toggleMenu);
+    }
+
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) closeMenu();
+    });
 
     // ── THEME TOGGLE ──
     const root = document.documentElement;
