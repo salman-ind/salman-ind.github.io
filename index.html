@@ -442,7 +442,7 @@
          .timeline-item { grid-template-columns: 1fr; gap: 8px; }
          .timeline-item::before { left: -27px; }
          .timeline-item.active::after { left: -22px; }
-         .tl-date { font-size: 10px; }
+         .tl-date { font-size: 16px; }
          .research-grid { grid-template-columns: 1fr; }
          .skills-grid { grid-template-columns: 1fr; }
          .skill-quadrant { border: none !important; padding: 0 0 28px !important; }
@@ -461,7 +461,8 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#research">Research</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="mailto:salman97@gmail.com" class="nav-cta">Contact ↗</a></li>
+            <li><a href="#hobbies">Projects</a></li>
+            <li><a href="#" class="nav-cta" onclick="document.getElementById('emailLink').click();document.getElementById('hero').scrollIntoView({behavior:'smooth'});return false;">Contact ↗</a></li>
          </ul>
          <div class="nav-actions">
             <button class="hamburger-btn" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -493,7 +494,7 @@
          <a href="#experience">Experience</a>
          <a href="#research">Research</a>
          <a href="#skills">Skills</a>
-         <a href="mailto:salman97@gmail.com" class="nav-cta">Contact ↗</a>
+         <a href="#" class="nav-cta" onclick="document.getElementById('emailLink').click();document.getElementById('hero').scrollIntoView({behavior:'smooth'});return false;">Contact ↗</a>
       </div>
       <!-- HERO -->
       <section id="hero">
@@ -725,6 +726,42 @@
             </div>
          </div>
       </div>
+      <!-- HOBBY PROJECTS -->
+      <div id="hobbies" class="section-wrap">
+         <div class="section-header fade-up">
+            <h2>Hobby Projects</h2>
+            <div class="section-rule"></div>
+         </div>
+         <div class="research-grid">
+            <a href="https://salman-ind.github.io/finch/" target="_blank" rel="noopener" class="r-card fade-up" style="transition-delay:.05s">
+               <div class="r-card-header">
+                  <span class="venue-badge badge-green">Finance · Web App</span>
+                  <span class="r-arrow">↗</span>
+               </div>
+               <p class="r-title">Finch — Personal Finance Manager</p>
+               <p class="r-desc">A lightweight, client-side finance tracker for logging income and expenses, visualising spending patterns, and keeping tabs on personal budgets — no account required.</p>
+               <div class="r-tags">
+                  <span class="r-tag">JavaScript</span>
+                  <span class="r-tag">Data Viz</span>
+                  <span class="r-tag">Budgeting</span>
+               </div>
+            </a>
+            <a href="https://salman-ind.github.io/wird/" target="_blank" rel="noopener" class="r-card fade-up" style="transition-delay:.1s">
+               <div class="r-card-header">
+                  <span class="venue-badge badge-amber">Islamic · Web App</span>
+                  <span class="r-arrow">↗</span>
+               </div>
+               <p class="r-title">Wird — Daily Islamic Companion</p>
+               <p class="r-desc">A minimalist Islamic utility featuring a digital tasbih counter, a curated dhikr collection, and a duas library — designed for calm, focused daily remembrance.</p>
+               <div class="r-tags">
+                  <span class="r-tag">JavaScript</span>
+                  <span class="r-tag">Tasbih</span>
+                  <span class="r-tag">Dhikr</span>
+                  <span class="r-tag">Dua</span>
+               </div>
+            </a>
+         </div>
+      </div>
       <!-- FOOTER -->
       <footer class="fade-up">
          <span class="footer-copy">© 2026 Mohamed Salman</span>
@@ -735,7 +772,7 @@
          </div>
          <span class="footer-loc">Saarbrücken · DE</span>
       </footer>
-      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+      <script>
          // Skills data
          const skills = {
            'sk-ml':   ['PyTorch', 'TensorFlow', 'scikit-learn', 'VQ-VAE', 'BERT', 'RoBERTa', 'XGBoost', 'LightGBM', 'ARIMA', 'Prophet'],
